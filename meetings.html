@@ -20,6 +20,15 @@
       <a href="meetings.html" class="active">Meetings</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="meetings.html" class="active">Meetings</a>
+      <a href="contact.html">Contact</a>
   </div>
   <div class="dot-strip"></div>
 </header>
@@ -108,10 +117,22 @@
     </div>
     <footer>
       <span>© 2026 Share the Page — meets twice monthly, everyone welcome.</span>
-      <a href="mailto:hello@sharethepage.example">hello@sharethepage.example</a>
+      <a href="mailto:cunymedonthesamepage@gmail.com">cunymedonthesamepage@gmail.com</a>
     </footer>
   </div>
 </section>
 
+<script>
+  (function(){
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if(!btn || !menu) return;
+    btn.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
 </body>
 </html>

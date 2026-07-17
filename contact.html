@@ -20,6 +20,15 @@
       <a href="meetings.html">Meetings</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="contact.html" class="active">Contact</a>
   </div>
   <div class="dot-strip"></div>
 </header>
@@ -44,8 +53,12 @@
       <h2>Get in touch</h2>
       <p>The fastest way to hear back is email — we usually reply within a day or two with the next meeting date and location.</p>
       <div class="cta-row">
-        <a href="mailto:hello@sharethepage.example" class="btn primary">Email hello@sharethepage.example</a>
-        <a href="#" class="btn ghost">Follow along on Instagram</a>
+        <a href="mailto:cunymedonthesamepage@gmail.com" class="btn primary">Email cunymedonthesamepage@gmail.com</a>
+        <a href="https://www.instagram.com/sd_onthesamepage/" class="btn ghost" target="_blank" rel="noopener">Follow along on Instagram</a>
+      </div>
+      <div class="cta-row" style="margin-top:14px;">
+        <a href="https://groupme.com/join_group/104015375/opVr8p7P" class="btn ghost" target="_blank" rel="noopener">Join the GroupMe for updates</a>
+        <a href="https://linktr.ee/sd_onthesamepage" class="btn ghost" target="_blank" rel="noopener">All our links (Linktree)</a>
       </div>
       <span class="scribble">first-timers always welcome ↴</span>
       <div class="pillars">
@@ -77,10 +90,22 @@
     </div>
     <footer>
       <span>© 2026 Share the Page — meets twice monthly, everyone welcome.</span>
-      <a href="mailto:hello@sharethepage.example">hello@sharethepage.example</a>
+      <a href="mailto:cunymedonthesamepage@gmail.com">cunymedonthesamepage@gmail.com</a>
     </footer>
   </div>
 </section>
 
+<script>
+  (function(){
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if(!btn || !menu) return;
+    btn.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
 </body>
 </html>

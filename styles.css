@@ -4,6 +4,7 @@
     --ink: #2f2136;
     --ink-soft: #6c5670;
     --plum: #7d4f8c;
+    --plum-vivid: #9a2fb0;
     --plum-deep: #582f65;
     --gold: #b98f6a;
     --moss: #7c8b5d;
@@ -67,16 +68,16 @@
   .brand{
     font-family:'Lovers Quarrel', cursive;
     font-weight:400;
-    font-size:2.4rem;
+    font-size:3rem;
     letter-spacing:0.015em;
     line-height:1;
     text-decoration:none;
-    color:var(--ink);
+    color:var(--plum-vivid);
     display:flex; align-items:center; gap:10px;
   }
   .brand .fold{
     width:14px;height:14px;
-    background:var(--plum);
+    background:var(--plum-vivid);
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     display:inline-block;
   }
@@ -84,7 +85,7 @@
   nav.links a{color:var(--ink-soft); text-decoration:none; text-transform:uppercase;}
   nav.links a:hover{color:var(--plum);}
   @media (max-width:640px){ nav.links{display:none;} }
-  @media (max-width:480px){ .brand{font-size:1.9rem;} }
+  @media (max-width:480px){ .brand{font-size:2.3rem;} }
 
   /* HERO */
   .hero{
@@ -594,4 +595,131 @@ nav.links a.active{color:var(--plum);}
 }
 @media (prefers-reduced-motion: reduce){
   .spin-flower{ transition:none; }
+}
+
+/* ===== Home page: paper filter + marquee + section wallpapers ===== */
+
+body.paper-texture::before{
+  content:"";
+  position:fixed; inset:0;
+  z-index:1;
+  pointer-events:none;
+  opacity:0.55;
+  mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.18  0 0 0 0 0.13  0 0 0 0 0.21  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+@keyframes marquee-scroll3 { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+.marquee-band{
+  background:var(--dot-dark);
+  padding:14px 0;
+  overflow:hidden;
+  position:relative;
+  z-index:2;
+}
+.marquee-band .mq-track{
+  display:flex;
+  width:max-content;
+  animation: marquee-scroll3 20s linear infinite;
+}
+@media (prefers-reduced-motion: reduce){ .marquee-band .mq-track{ animation:none; } }
+.marquee-band span{
+  font-family:'Space Mono', monospace;
+  font-weight:700;
+  font-size:0.95rem;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+  white-space:nowrap;
+  padding:0 26px;
+}
+.marquee-band span.a{ color:var(--paper); }
+.marquee-band span.b{ color:var(--gold); }
+
+.chapter.wallpaper{
+  position:relative;
+  background-repeat:repeat;
+}
+.chapter.wallpaper::before{
+  content:"";
+  position:absolute; inset:0;
+  background:rgba(245,236,243,0.82);
+}
+.chapter.wallpaper > .wrap{ position:relative; z-index:2; }
+
+.chapter.wallpaper.mission-bg{
+  background-image:url('mission-pattern.jpg');
+  background-size:auto 100%;
+  background-repeat:repeat-x;
+}
+.chapter.wallpaper.beyond-bg{
+  background-image:url('stripe.jpg');
+  background-size:260px;
+}
+.chapter.wallpaper.reading-bg{
+  background-image:url('lily.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+/* Chapter-opening treatment for "Share the Page" intro on the About page */
+.chapter-lead{
+  font-family:'Henny Penny', cursive;
+  font-size:1.65em;
+  line-height:0.85;
+  color:var(--plum-vivid);
+  margin-right:0.1em;
+  vertical-align:-0.08em;
+  letter-spacing:0.01em;
+}
+
+/* ===== Mobile hamburger menu ===== */
+.menu-btn{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  width:32px;
+  height:32px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:0;
+}
+.menu-btn span{
+  display:block;
+  width:100%;
+  height:2px;
+  background:var(--ink);
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+.menu-btn.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.menu-btn.open span:nth-child(2){ opacity:0; }
+.menu-btn.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:var(--paper-dark);
+  border-bottom:1px solid var(--rule);
+  overflow:hidden;
+  max-height:0;
+  transition:max-height 0.25s ease;
+}
+.mobile-menu.open{ max-height:280px; }
+.mobile-menu a{
+  padding:16px 28px;
+  font-family:'Space Mono', monospace;
+  font-size:0.85rem;
+  text-transform:uppercase;
+  letter-spacing:0.03em;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-top:1px solid var(--rule);
+}
+.mobile-menu a.active{ color:var(--plum-vivid); }
+
+@media (max-width:640px){
+  nav.links{ display:none; }
+  .menu-btn{ display:flex; }
+  .mobile-menu.open{ display:flex; }
 }
