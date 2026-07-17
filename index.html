@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share the Page — A literacy-first reading circle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Newsreader:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@500;700&family=Lovers+Quarrel&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><span class="fold"></span>Share the Page</a>
+    <nav class="links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="dot-strip"></div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow"><span class="spark">✦</span> A reading circle, built for real readers</span>
+    <h1>Every reader belongs at <em>this</em> table.</h1>
+    <p class="lede">Share the Page is the founding chapter of On the Same Page — a reading circle built around literacy, not literary credentials. No pressure to have finished the book, no judgment on how fast you read, and no such thing as a wrong question.</p>
+    <div class="cta-row">
+      <a href="contact.html" class="btn primary">Join the next meeting</a>
+      <a href="about.html" class="btn ghost">What we're about</a>
+    </div>
+    <div class="fold-card">
+      "I hadn't finished a book since high school. Six months in, I've read four — out loud, at my own pace, and nobody blinked."
+      <cite>— A member, three meetings in</cite>
+    </div>
+  </div>
+</section>
+
+<div class="dot-strip"></div>
+
+<section class="chapter">
+  <div class="wrap chapter-grid">
+    <div class="margin-col">
+      <span class="num">I.</span>
+      <span class="label">The mission</span>
+    </div>
+    <div>
+      <h2>Reading isn't an assignment here. It's something to look forward to.</h2>
+      <p>College trades the books that used to fuel our imaginations for dense academic texts — and that shift quietly pushes a lot of people away from reading for pleasure. On the Same Page exists to reverse that, one chapter, one book, one conversation at a time.</p>
+      <div class="framework">
+        <div class="framework-card">
+          <h3>Mirrors</h3>
+          <p>Books that reflect a reader's own life back at them.</p>
+        </div>
+        <div class="framework-card">
+          <h3>Windows</h3>
+          <p>Books that offer a clear view into a life unlike their own.</p>
+        </div>
+        <div class="framework-card">
+          <h3>Sliding glass doors</h3>
+          <p>Books immersive enough to step through and come out changed.</p>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top:36px;">
+        <a href="about.html" class="btn ghost">Read our full mission →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap chapter-grid">
+    <div class="margin-col">
+      <span class="num">II.</span>
+      <span class="label">Beyond the club</span>
+    </div>
+    <div>
+      <h2>Building libraries in literary deserts</h2>
+      <p>On the Same Page is working toward nonprofit status to fund physical libraries in communities where access to books is limited. Every chapter's fundraising contributes to the same goal.</p>
+      <div class="fund">
+        <div class="fund-top">
+          <span>Toward our first community library</span>
+          <strong>$0 of $25,000</strong>
+        </div>
+        <div class="fund-track"><div class="fund-fill" style="width:0%;"></div></div>
+        <p class="fund-note">Illustrative goal — fundraising is just getting started.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap chapter-grid">
+    <div class="margin-col">
+      <span class="num">III.</span>
+      <span class="label">On the table now</span>
+    </div>
+    <div>
+      <h2>Currently reading</h2>
+      <div class="book-card">
+        <div class="spine"></div>
+        <div>
+          <span class="meta">Chapters 1–4 · Discussion Aug 6</span>
+          <h3>The Alchemist</h3>
+          <p>A short, plain-spoken story about a shepherd chasing a recurring dream — chosen because it reads easily out loud and gives everyone plenty to talk about.</p>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top:28px;">
+        <a href="meetings.html" class="btn ghost">See the full meeting schedule →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="join" id="join">
+  <div class="dot-strip dark" style="position:absolute; top:0; left:0; right:0;"></div>
+  <div class="wrap">
+    <h2>Pull up a chair. We'll save your page.</h2>
+    <p>Meetings are free and open — drop in once, or become a regular. Reach out and we'll send the next date, location, and a spare copy of the book if you need one.</p>
+    <div class="cta-row">
+      <a href="contact.html" class="btn primary">Get in touch</a>
+      <a href="#" class="btn ghost">Follow along on Instagram</a>
+    </div>
+    <footer>
+      <span>© 2026 Share the Page — meets twice monthly, everyone welcome.</span>
+      <a href="mailto:hello@sharethepage.example">hello@sharethepage.example</a>
+    </footer>
+  </div>
+</section>
+
+<img src="flower.png" alt="" aria-hidden="true" class="spin-flower" id="spinFlower">
+
+</body>
+<script>
+  (function(){
+    var flower = document.getElementById('spinFlower');
+    if(!flower) return;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduceMotion) return;
+    var ticking = false;
+    function update(){
+      var angle = (window.scrollY * 0.35) % 360;
+      flower.style.transform = 'rotate(' + angle + 'deg)';
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, {passive:true});
+  })();
+</script>
+</html>
