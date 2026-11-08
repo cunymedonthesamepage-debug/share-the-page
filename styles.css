@@ -723,3 +723,67 @@ body.paper-texture::before{
   .menu-btn{ display:flex; }
   .mobile-menu.open{ display:flex; }
 }
+
+/* DEMO: Mountains of Christmas */
+nav.links a, .mobile-menu a{font-family:'Mountains of Christmas',cursive; font-weight:700; font-size:1.2rem; letter-spacing:0.01em;}
+.mobile-menu a{font-size:1.3rem;}
+.hero .eyebrow{font-family:'Mountains of Christmas',cursive; font-weight:700; font-size:1.35rem; letter-spacing:0.03em;}
+.book-card .meta, .schedule .row span:first-child{font-family:'Mountains of Christmas',cursive; font-weight:700; font-size:1.15rem; letter-spacing:0.02em;}
+.schedule .row span:first-child{color:var(--plum);}
+.book-card .meta{font-family:'Tangerine',cursive; font-weight:700; font-size:1.7rem; letter-spacing:0.01em; text-transform:none;}
+.fund .schedule{margin-top:6px;}
+.fund .schedule .row span:last-child{text-align:right;}
+.fund .cta-row{margin-top:22px;}
+/* Dongle: lower buttons */
+.chapter .cta-row .btn[href="about.html"], .chapter .cta-row .btn[href="meetings.html"], .fund .cta-row .btn{font-family:'Dongle',sans-serif; font-weight:700; font-size:1.7rem; letter-spacing:0.04em; line-height:1.1; padding:10px 28px 8px;}
+/* Book fair details */
+.bf{display:grid; grid-template-columns:auto 1fr; gap:10px 36px; align-items:center;}
+.bf-when{text-align:center; min-width:130px;}
+.bf-date{display:block; font-family:'Mountains of Christmas',cursive; font-weight:700; font-size:3.4rem; line-height:1; color:var(--plum);}
+.bf-time{display:block; font-family:'Mountains of Christmas',cursive; font-weight:700; font-size:1.7rem; line-height:1.2; color:var(--ink); margin-top:4px;}
+.bf-where{display:flex; flex-direction:column; gap:3px; color:var(--ink-soft);}
+.bf-where strong{font-family:'Fraunces',serif; font-weight:600; font-size:1.3rem; color:var(--ink); line-height:1.25;}
+.bf-where a{color:var(--plum);}
+.bf-open{margin-top:8px; font-style:italic; color:var(--ink);}
+@media (max-width:600px){ .bf{grid-template-columns:1fr; gap:14px;} .bf-when{text-align:left;} }
+/* Dongle: hero eyebrow + hero buttons */
+.hero .eyebrow{font-family:'Dongle',sans-serif; font-weight:700; font-size:2rem; letter-spacing:0.04em; line-height:1;}
+.hero .cta-row .btn{font-family:'Dongle',sans-serif; font-weight:700; font-size:1.7rem; letter-spacing:0.04em; line-height:1.1; padding:10px 28px 8px;}
+/* Life Savers: member credit, section labels, lower buttons */
+.fold-card cite{font-family:'Life Savers',cursive; font-weight:700; font-size:0.95rem; letter-spacing:0.01em;}
+.margin-col .label{font-family:'Life Savers',cursive; font-weight:700; font-size:1rem; letter-spacing:0.04em;}
+.join .cta-row .btn{font-family:'Life Savers',cursive; font-weight:700; font-size:0.9rem; letter-spacing:0.02em;}
+
+/* FINAL: all buttons Dongle; all numbered section labels Life Savers */
+.btn{font-family:'Dongle',sans-serif !important; font-weight:700 !important; font-size:1.7rem !important; letter-spacing:0.04em !important; line-height:1.1 !important; padding:10px 28px 8px !important;}
+.margin-col .label{font-family:'Life Savers',cursive !important; font-weight:700 !important; font-size:1rem !important; letter-spacing:0.04em !important; text-transform:uppercase !important;}
+
+/* BRAND */
+.brand{font-family:'Ingrid Darling',cursive !important; font-style:normal !important; font-weight:400 !important; font-size:2.9rem !important; letter-spacing:0.01em !important; line-height:1 !important; color:var(--plum-deep) !important;}
+.brand .fold{background:var(--plum) !important;}
+@media (max-width:480px){ .brand{font-size:2.3rem !important;} }
+
+/* NAV: sentence case, smaller than the brand */
+nav.links a{text-transform:none !important; font-size:1.05rem !important; letter-spacing:0.01em !important;}
+.mobile-menu a{text-transform:none !important; font-size:1.15rem !important; letter-spacing:0.01em !important;}
+
+/* About page: small labels in Newsreader */
+.fund-top span{font-family:'Newsreader', serif; font-size:1.05rem; text-transform:none; letter-spacing:0;}
+.voice .who{font-family:'Newsreader', serif; font-size:1rem; text-transform:none; letter-spacing:0;}
+
+/* Events page */
+.ev{display:grid; grid-template-columns:minmax(220px,340px) 1fr; gap:40px; align-items:start; margin-top:8px;}
+.ev img{width:100%; height:auto; display:block; border:1px solid var(--rule); box-shadow:0 10px 28px rgba(0,0,0,0.12);}
+.ev-details{display:flex; flex-direction:column; gap:22px;}
+.bf{display:grid; grid-template-columns:auto 1fr; gap:10px 36px; align-items:center;}
+.bf-when{text-align:center; min-width:130px;}
+.bf-date{display:block; font-family:'Mountains of Christmas',cursive; font-weight:700; font-size:3.4rem; line-height:1; color:var(--plum);}
+.bf-time{display:block; font-family:'Mountains of Christmas',cursive; font-weight:700; font-size:1.7rem; line-height:1.2; color:var(--ink); margin-top:4px;}
+.bf-where{display:flex; flex-direction:column; gap:3px; color:var(--ink-soft);}
+.bf-where strong{font-family:'Fraunces',serif; font-weight:600; font-size:1.3rem; color:var(--ink); line-height:1.25;}
+.bf-where a{color:var(--plum);}
+.chips{display:flex; flex-wrap:wrap; gap:10px; margin:0; padding:0; list-style:none;}
+.chips li{border:1px solid var(--rule); background:var(--paper); padding:6px 16px; border-radius:999px; font-size:0.95rem; color:var(--ink);}
+.ev-presented{margin:0; font-style:italic; color:var(--ink-soft);}
+.ev-btn{font-family:'Dongle',sans-serif; font-weight:700; font-size:1.7rem; letter-spacing:0.04em; line-height:1.1; padding:10px 28px 8px;}
+@media (max-width:700px){ .ev{grid-template-columns:1fr;} .bf{grid-template-columns:1fr; gap:14px;} .bf-when{text-align:left;} }
